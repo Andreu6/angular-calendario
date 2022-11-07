@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "example-calendar"
+  "defaultProject": "example-calendar",
+  "cli": {
+    "analytics": false
+  }
 }
