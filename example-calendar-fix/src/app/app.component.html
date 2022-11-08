@@ -1,3 +1,10 @@
+<div class="alin">
+	<h1 id="festiu">Festiu Nacional</h1> 
+	<h1 id="regional">Festiu Regional</h1> 
+	<h1 id="local">Festiu Local</h1> 
+	<h1 id="centre">Festiu Centre</h1>
+</div>
+<div class="alin2">
 <div class="wrapper-calendar">
 	<div class="header-calendar">
 		<h1>{{seleccionarDia | date:'MMMM, yyyy'}}</h1>
@@ -13,14 +20,15 @@
 </div>
 <div class="wrapper-calendar">
 	<div class="header-calendar">
-		<h1>{{seleccionarDia | date:'MMMM, yyyy'}}</h1>
+		<h1>{{seleccionarDia2 | date:'MMMM, yyyy'}}</h1>
 	</div>
 	<ol>
-		<li *ngFor="let day of semana" class="day-name">{{day | slice:0:3}}</li>
+		<li *ngFor="let day2 of semana" class="day-name">{{day2 | slice:0:3}}</li>
 
-        <li (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
-         *ngFor="let day of seleccionarMes;let first = first">
-			<span>{{day?.value}}</span>
+        <li [style.gridColumnStart]="first ? day2?.indexWeek2 : 'auto'"
+         *ngFor="let day2 of seleccionarMes2;let first = first">
+			<span>{{day2?.value2}}</span>
 		</li>
 	</ol>
+</div>
 </div>

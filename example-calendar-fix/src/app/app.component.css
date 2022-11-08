@@ -67,4 +67,29 @@ div {
     background-color: transparent;
     border: 0;
   }
+
+  .alin {
+    display: flex;
+    width: 49rem;
+  }
   
+  .alin2 {
+    display: flex;
+    
+  }
+
+  #festiu {
+color: green;
+  }
+
+  #regional {
+    color: purple;
+  }
+
+  #local {
+    color: mediumvioletred;
+  }
+
+  #centre {
+    color: yellow;
+  }
