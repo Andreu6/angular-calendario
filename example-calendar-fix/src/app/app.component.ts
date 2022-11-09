@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     "Domingo"
   ];
 
-
+  
   seleccionarMes: any[];
   seleccionarMes2: any[];
   seleccionarDia: any;
@@ -29,9 +29,9 @@ export class AppComponent implements OnInit {
     this.getDaysFromDate(9, 2022)
     this.getDaysFromDate2(10,2022)
   }
-
+  
   getDaysFromDate(month, year) {
-
+    
     const startDate = moment.utc(`${year}/${month}/01`) //la constant agafe els dos arguments que es pasen a la funcio, utc = zona horaria dispositiu
     const endDate = startDate.clone().endOf('month') //la constant per saber quant acabe el mes
     this.seleccionarDia = startDate;
@@ -42,6 +42,7 @@ export class AppComponent implements OnInit {
     const arrayDays = Object.keys([...Array(numberDays)]).map((a: any) => {
       a = parseInt(a) + 1;
       const dayObject = moment(`${year}-${month}-${a}`);
+      
       return {
         name: dayObject.format("dddd"),
         value: a,
