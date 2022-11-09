@@ -14,7 +14,9 @@
 
         <li [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
          *ngFor="let day of seleccionarMes;let first = first">
-			<span>{{day?.value}}</span>
+		 <span *ngIf="day.value == 11" [ngClass]="['festiuRegional']">{{day?.value}}</span>
+		 <span *ngIf="day.value == 29" [ngClass]="['festiuLocal']">{{day?.value}}</span>
+		 <span *ngIf="day.value != 29 && day.value != 11">{{day?.value}}</span>
 		</li>
 	</ol>
 </div>
@@ -27,7 +29,9 @@
 
         <li [style.gridColumnStart]="first ? day2?.indexWeek2 : 'auto'"
          *ngFor="let day2 of seleccionarMes2;let first = first">
-			<span>{{day2?.value2}}</span>
+		 <span *ngIf="day2.value2 == 12" [ngClass]="['festiuNacional']">{{day2?.value2}}</span>
+		 <span *ngIf="day2.value2 == 31" [ngClass]="['festiuCentre']">{{day2?.value2}}</span>
+		 <span *ngIf="day2.value2 != 12 && day2.value2 != 31">{{day2?.value2}}</span>
 		</li>
 	</ol>
 </div>
