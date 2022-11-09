@@ -75,7 +75,8 @@ div {
   
   .alin2 {
     display: flex;
-    
+    justify-content: center;
+    width: 48.5rem;
   }
 
   #festiu {
