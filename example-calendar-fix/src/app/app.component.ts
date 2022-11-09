@@ -19,7 +19,13 @@ export class AppComponent implements OnInit {
     "Domingo"
   ];
 
-  
+  festiuNacional:string = "rgb(0, 128, 0)";
+  festiuRegional:string = "rgb(128, 0, 128)";
+  festiuLocal:string = "rgb(199, 21, 133)";
+  festiuCentre:string = "rgb(255, 255, 0)";
+
+
+ 
   seleccionarMes: any[];
   seleccionarMes2: any[];
   seleccionarDia: any;
@@ -31,9 +37,9 @@ export class AppComponent implements OnInit {
   }
   
   getDaysFromDate(month, year) {
-    
-    const startDate = moment.utc(`${year}/${month}/01`) //la constant agafe els dos arguments que es pasen a la funcio, utc = zona horaria dispositiu
-    const endDate = startDate.clone().endOf('month') //la constant per saber quant acabe el mes
+
+    const startDate = moment.utc(`${year}/${month}/01`) 
+    const endDate = startDate.clone().endOf('month') 
     this.seleccionarDia = startDate;
 
     const diffDays = endDate.diff(startDate, 'days', true)
@@ -54,7 +60,6 @@ export class AppComponent implements OnInit {
   }
 
   getDaysFromDate2(month2, year2) {
-
     const startDate2 = moment.utc(`${year2}/${month2}/01`)
     const endDate2 = startDate2.clone().endOf('month')
     this.seleccionarDia2 = startDate2;

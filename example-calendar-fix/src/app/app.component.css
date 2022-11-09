@@ -78,19 +78,3 @@ div {
     justify-content: center;
     width: 48.5rem;
   }
-
-  #festiu {
-color: green;
-  }
-
-  #regional {
-    color: purple;
-  }
-
-  #local {
-    color: mediumvioletred;
-  }
-
-  #centre {
-    color: yellow;
-  }
